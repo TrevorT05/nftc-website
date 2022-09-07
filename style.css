@@ -1,0 +1,37 @@
+:root {
+  /*
+  --primary-color: ;
+  --secondary-color:;
+  --large-font:;
+  --small-font:;
+  */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  height: 60px;
+  padding: 0px 24px;
+  background-color: #3b3b3b;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.banner > * {
+  width: 100%;
+}
