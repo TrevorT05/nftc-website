@@ -18,8 +18,8 @@
                     </div>
                     <div id="links">
                         <a href="#signup">Signup</a>
-                        <a href="#merch">Merch</a>
-                        <a href="">Donate</a>
+                        <a href="https://form.jotform.com/MVA1912/night-for-the-cure-order-form-cc">Merch</a>
+                        <!--<a href="">Donate</a>-->
                     </div>
                 </nav>
                 <div class="banner">
@@ -32,11 +32,12 @@
                     <div>
                         <img src="./imgs/walking.png" alt="" class="walking">
                         <div class="about-text">
-                            NFC is a night of fun, food and fellowship where MVA 
+                            NFC is a night of fun, food, and fellowship where MVA 
                             Families come together to support each other in the 
-                            battle against cancer. It is our collective Commitment 
-                            to Courage that can have a positive impact on our community!
-                        </div>
+                            battle against cancer. Together we will be lighting 
+                            the way to a cure for cancer and having a positive impact on our community!
+                        </div> <!-- It is our collective Commitment 
+                            to Courage that can have a positive impact on our community!-->
                     </div>
                 </section>
                 <section id="signup">
@@ -51,7 +52,7 @@
                             ethnic food, baked goods, pizza, interactive games, sports challenges, 
                             glow sticks, etc.
                         </p>
-                        <button class="signup" id="team-signup">Signup</button>
+                        <button class="signup" id="team-signup" onclick="window.location.href = 'https://forms.gle/zZkbEtkqD3yy5S7b8'">Signup</button>
                     </div>
                     <div class="hero">
                         <img src="./imgs/hero.png" alt="" id="hero-img">
@@ -61,31 +62,44 @@
                             Nest. If you know someone who is a survivor or battling cancer please 
                             sign them up for our Survivor Tent! 
                         </p>
-                        <button class="signup" id="hero-signup">Signup</button>
+                        <button class="signup" id="hero-signup" onclick="window.location.href = 'https://forms.gle/yRQ2zwp8H9PoBxz26'">Signup</button>
                     </div>
                 </section>
                 <section id="merch">
-                    <div class="img"></div>
+                    <!--<div class="img"></div>-->
+                    <img src="./imgs/merch.jpeg" class="merchimg">
                     <div class="column">
                         <div class="merch-text">
                             Order your NFC merch here!
                         </div>
                         <p id="merch-styles">
-                            Adult T-shirts in Cool Blue - Sizes S- 2XL <br>
-                            Youth T-shirts in White - Sizes S, M,  L only <br>
-                            Adult Sweatshirts in White - S - XL
+                            Adult T-shirts in Forest Green - Sizes S - 2XL <br>
+                            Youth T-shirts in Forest Green - Sizes M, L only <br>
+                            Adult Sweatshirts in Forest Green - S - 2XL
                         </p>
                         <div class="buttons">
-                            <button id="paypal-btn">PayPal</button>
-                            <button id="studentid-btn">Student ID</button>
+                            <button id="purchase-btn" onclick="window.location.href = 'https://form.jotform.com/MVA1912/night-for-the-cure-order-form-cc';">
+                                Purchase
+                            </button>
+                            <!--<button id="studentid-btn">Student ID</button>-->
                         </div>
                     </div>
                 </section>
-                <section id="angel"></section>
+                <section id="angel">
+                    <div id="angeltext">
+                        Purchase your Angel Packages
+                    </div>
+                    <button id="angelbtn" onclick="window.location.href = 'https://form.jotform.com/MVA1912/angelpackage';">
+                        Angel Package
+                    </button>
+                    <img src="./imgs/angelpackageflyer.png" id="angelflyer">
+                </section>
             </main>
 
             <footer>
-
+                <div id="footertxt">
+                    Night For The Cure 2023
+                </div>
             </footer>
         </div>
     </body>

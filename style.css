@@ -9,6 +9,11 @@
   */
   font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   scroll-behavior: smooth;
+
+  --xl-font: 36px;
+  --l-font: 24px;
+  --m-font: 20px;
+  --s-font: 16px;
 }
 
 body {
@@ -47,7 +52,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
 
 header {
@@ -63,7 +68,7 @@ nav {
   /*background-color: #3b3b3b;*/
   background-color: rgb(76, 115, 224);
   color: white;
-  font-size: 24px;
+  font-size: var(--l-font);
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -113,19 +118,20 @@ main {
   background-color: #f4f4f4;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 36px;
   border-radius: 16px;
 }
 
 .walking {
   width: auto;
-  height: 270px;
+  height: 250px;
   border-radius: 8px;
 }
 
 .about-text {
   width: 300px;
-  font-size: 26px;
+  font-size: var(--l-font);
   text-align: center;
   font-weight: 300;
 }
@@ -135,6 +141,7 @@ main {
   background-color: #f4f4f4;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   /*align-items: center;*/
   gap: 25px;
@@ -145,6 +152,7 @@ main {
   border-radius: 16px;
   padding: 24px;
   width: 400px;
+  min-width: 400px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -160,13 +168,13 @@ main {
 
 .team-title,
 .hero-title {
-  font-size: 36px;
+  font-size: var(--xl-font);
   font-weight: 400;
 }
 
 #team-text,
 #hero-text {
-  font-size: 20px;
+  font-size: var(--m-font);
   font-weight: 300;
   text-align: center;
 }
@@ -178,14 +186,15 @@ main {
   border-radius: 8px;
   background-color: rgb(76, 115, 224);
   color: white;
-  font-size: 20px;
+  font-size: var(--m-font);
 }
 
 #merch {
-  height: 500px;
+  padding: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap-reverse;
   align-items: center;
   gap: 36px;
 }
@@ -204,14 +213,20 @@ main {
 }
 
 .merch-text {
-  font-size: 24px;
+  font-size: var(--l-font);
   font-weight: 700;
+}
+
+#merch-styles {
+  font-size: var(--s-font);
 }
 
 .buttons {
   display: flex;
   flex-direction: row;
   gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttons > * {
@@ -221,10 +236,137 @@ main {
   color: white;
   border: 0;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: var(--s-font);
 }
 
 #angel {
-  height: 500px;
+  padding: 36px;
+  gap: 16px;
   background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#angelflyer {
+  width: 500px;
+  height: auto;
+}
+
+#angeltext {
+  font-size: var(--m-font);
+  font-weight: bold;
+}
+
+#angelbtn {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(76, 115, 224);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-size: var(--s-font);
+}
+
+footer {
+  background-color: #404040;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footertxt {
+  font-size: var(--m-font);
+  color: #e0e0e0;
+}
+
+@media only screen and (max-width: 920px) {
+  #about > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  #merch > .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 16px;
+    height: 50px;
+  }
+
+  #links {
+    /*width: 100%;*/
+    display: none;
+  }
+
+  .banner {
+    /*height: 0px;*/
+    width: 100vw;
+  }
+
+  #about > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .merchimg {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    --xl-font: 32px;
+    --l-font: 20px;
+    --m-font: 20px;
+    --s-font: 14px;
+  }
+
+  #about > div {
+    width: 80vw;
+  }
+
+  #about > div > img {
+    width: 75vw;
+    height: auto;
+  }
+
+  #signup > * {
+    width: 80vw;
+    min-width: 300px;
+  }
+
+  #signup > * > img {
+    width: 75vw;
+    height: auto;
+  }
+
+  .buttons > * {
+    width: 100px;
+  }
+
+  #angelflyer {
+    width: 100%;
+  }
 }
